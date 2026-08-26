@@ -1,0 +1,77 @@
+# MultiLynq
+
+> MultiLynq is a fixed income trading technology company (founded 2018, Shrewsbury,
+> New Jersey) selling market integration as a service: a single high-performance API
+> that normalizes the messaging and trading protocols of every major and emerging
+> electronic U.S. fixed income trading venue into one interface for credit,
+> municipal bond and loan trading.
+
+<!--
+generated: 2026-08-26
+method: generated
+source: apis.yml + www.multilynq.com (no provider-published /llms.txt exists;
+        https://www.multilynq.com/llms.txt returned HTTP 404)
+-->
+
+## What MultiLynq does
+
+- One normalized API across venues, replacing per-venue integrations.
+- Venue aggregation: pricing and market data from established and emerging venues
+  over a single normalized API, with quoting, routing and RFQ options.
+- Pre- and post-trade coverage: price dissemination, market data aggregation,
+  smart order routing, post-trade reporting and reconciliation.
+- Trading protocols handled: RFQ negotiation, portfolio trading, auction
+  mechanisms, and various quoting conventions.
+- Fully hosted delivery: the client establishes a single physical connection to a
+  MultiLynq data center; MultiLynq maintains all upstream venue connectivity.
+- Asset classes: corporate credit, municipal bonds, loans.
+
+## Venues MultiLynq connects to
+
+Bloomberg, MarketAxess (including Live Markets), Tradeweb (including Dealerweb
+Wholesale and Tradeweb Direct), Trumid, ICE Bonds, LTX by Broadridge, Liquidnet,
+Octaura, TMC Bonds, Bonds.com, UBS credit electronic trading.
+
+## Company
+
+- Founded: 2018 by Patrick Scheideler (Co-Founder) and Scott Collins (Co-Founder),
+  previously COO and CTO respectively at InterDealer Trading Solutions.
+- Headquarters: Shrewsbury, New Jersey, United States.
+- Investors: Citadel Securities, Jane Street.
+- Announced integrations: Trumid (2024), LTX by Broadridge (2024).
+
+## Pages
+
+- [Home](https://www.multilynq.com/): product overview and venue list.
+- [What We Do](https://www.multilynq.com/what-we-do/): solutions, protocols, delivery model.
+- [About](https://www.multilynq.com/about/): mission and founders.
+- [Contact](https://www.multilynq.com/contact/): the only route to the API — a form,
+  a phone number ((646) 968-9670) and info@multilynq.com.
+
+## For agents and integrators: what is NOT available
+
+MultiLynq's API is its entire product, but there is no public developer surface.
+Verified on 2026-08-26 across every MultiLynq host that resolves:
+
+- No developer portal, documentation site or API reference. api.multilynq.com,
+  docs.multilynq.com and developer.multilynq.com have no DNS records.
+- No machine-readable contract. OpenAPI, Swagger, GraphQL, AsyncAPI, gRPC/Protobuf
+  and WSDL probes all missed (HTTP 404 on www.multilynq.com).
+- No SDKs or client libraries in npm, PyPI or GitHub; no GitHub organization.
+- No MCP server, no A2A agent card, no /.well-known documents of any kind.
+- No published pricing, plans, rate limits, status page, changelog or trust center.
+- No self-service sign-up. Access is arranged through a sales conversation and a
+  per-client provisioned connection into a MultiLynq data center.
+
+An agent cannot call this API. Integration begins at
+https://www.multilynq.com/contact/ or info@multilynq.com.
+
+## Artifacts in this profile
+
+- [Conformance](conformance/multilynq-conformance.yml): domain-standard check (FIX,
+  MSRB RTRS, FINRA TRACE) — unverified, no contract to read.
+- [Domain security](security/multilynq-domain-security.yml): probed TLS/DNS posture.
+- [Well-known](well-known/multilynq-well-known.yml): probed absence of every well-known path.
+- [Packages](packages/multilynq-packages.yml): registry sweep, zero first-party libraries.
+- [Plans](plans/multilynq-plans-pricing.yml): no published pricing.
+- [Rate limits](rate-limits/multilynq-rate-limits.yml): no published limits.

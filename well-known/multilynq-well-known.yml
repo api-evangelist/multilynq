@@ -1,0 +1,50 @@
+generated: '2026-08-26'
+method: probed
+source: live GET probes of /.well-known/* on every MultiLynq host that resolves
+note: >-
+  Every well-known path probed returned the WordPress 404 template (HTTP 404,
+  text/html, ~40KB). MultiLynq serves no well-known documents of any kind, so NO
+  WellKnown, APICatalog or SecurityTxt pointer is wired into apis.yml — this file
+  records a verified absence, not a presence. www.multilynq.com is the only host
+  that resolves; api., docs., developer., gateway., portal., status., trust.,
+  support. and blog..multilynq.com have no DNS records, and staging.multilynq.com
+  (linked from the homepage contact button) does not resolve either.
+hosts:
+- host: www.multilynq.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /security.txt
+    status: 404
+    file: null
+unresolved_hosts:
+- host: staging.multilynq.com
+  note: linked from the homepage contact CTA but has no DNS record; all probes returned curl exit 6
+- host: api.multilynq.com
+  note: no DNS record
+- host: docs.multilynq.com
+  note: no DNS record
+- host: developer.multilynq.com
+  note: no DNS record

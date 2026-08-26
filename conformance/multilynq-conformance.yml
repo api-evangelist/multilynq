@@ -1,0 +1,73 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.multilynq.com/what-we-do/
+note: >-
+  Nothing here could be verified against a contract, because MultiLynq publishes
+  none. Standards conformance in this pipeline is read from the machine-readable
+  contract (a schema URN, a metadata surface, a declared message type), not from
+  marketing prose, and STEP 0b contract discovery found no OpenAPI, GraphQL,
+  AsyncAPI, gRPC or WSDL surface on any MultiLynq host. Every entry below is
+  therefore recorded as unverified rather than absent: MultiLynq's public material
+  describes venue protocol handling in general terms ("supports every trading
+  protocol", "RFQ negotiation, portfolio trading, auction mechanisms, and various
+  quoting conventions") but never names a wire standard or version. No Compliance
+  pointer is wired into apis.yml, because no certification or compliance program
+  is published either.
+conformance:
+- id: fix
+  name: FIX (Financial Information eXchange) Protocol
+  conforms: false
+  status: unverified
+  evidence: >-
+    FIX is the dominant wire standard for electronic fixed income order and quote
+    messaging, so it is the first domain standard worth probing for this sector.
+    MultiLynq's own site never names FIX, FIXML or a FIX version, and no contract
+    is published in which a FIX message type or session profile could be declared.
+    Its venue partners (MarketAxess, Tradeweb, Trumid, LTX) do publish FIX
+    interfaces, and MultiLynq's stated business is normalizing those venue
+    protocols, but that is an inference about the upstream venues, not a
+    conformance claim MultiLynq makes or that can be checked here.
+- id: msrb-rtrs
+  name: MSRB Real-Time Transaction Reporting System
+  conforms: false
+  status: unverified
+  evidence: >-
+    MultiLynq advertises municipal bond trading support and "post-trade reporting
+    and reconciliation" on /what-we-do/, which in U.S. munis means MSRB RTRS. The
+    site does not name MSRB, RTRS or a submission format, and no contract exists
+    to check a message shape against.
+- id: finra-trace
+  name: FINRA TRACE
+  conforms: false
+  status: unverified
+  evidence: >-
+    Same shape as MSRB RTRS for corporate credit: post-trade reporting is
+    advertised on /what-we-do/, TRACE is the governing reporting facility, and
+    neither TRACE nor a reporting format is named anywhere in MultiLynq's public
+    material.
+- id: openapi
+  name: OpenAPI
+  conforms: false
+  status: verified-absent
+  evidence: >-
+    Probed /openapi.json, /openapi.yaml, /swagger.json, /v1/openapi.json,
+    /api-docs, /docs and /redoc on www.multilynq.com — all 404 (WordPress 404
+    template). api., docs. and developer..multilynq.com do not resolve.
+- id: graphql
+  name: GraphQL
+  conforms: false
+  status: verified-absent
+  evidence: /graphql on www.multilynq.com returned 404.
+- id: asyncapi
+  name: AsyncAPI
+  conforms: false
+  status: verified-absent
+  evidence: /asyncapi.yaml on www.multilynq.com returned 404; no event or streaming surface is documented.
+- id: oauth2
+  name: OAuth 2.0
+  conforms: false
+  status: verified-absent
+  evidence: >-
+    /.well-known/oauth-authorization-server and
+    /.well-known/oauth-protected-resource both returned 404; no authentication
+    model is documented publicly.

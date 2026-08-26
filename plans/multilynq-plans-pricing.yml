@@ -1,0 +1,21 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.multilynq.com/
+plan_count: 0
+plans: []
+note: >-
+  MultiLynq publishes no plans, tiers or prices. The entire public site is four
+  pages (/, /about/, /what-we-do/, /contact/) and none mentions price, tier,
+  quota or billing; /pricing returned 404. Commercial terms are reached only
+  through the contact form on /contact/, which states "Fill out the form below
+  and a member of our team will be in touch shortly." This is an enterprise
+  sales-gated engagement typical of venue-connectivity vendors selling to tier-1
+  dealers and systematic trading firms, not a self-serve API product.
+evidence:
+- url: https://www.multilynq.com/pricing
+  status: 404
+- url: https://www.multilynq.com/contact/
+  status: 200
+- url: https://www.multilynq.com/wp-sitemap-posts-page-1.xml
+  status: 200
+  note: full site inventory — four pages, no pricing page exists

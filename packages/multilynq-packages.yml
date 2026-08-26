@@ -1,0 +1,31 @@
+generated: '2026-08-26'
+method: searched
+source: registry searches across npm, PyPI and GitHub
+package_count: 0
+packages: []
+note: >-
+  No first-party MultiLynq client libraries exist in any public package registry.
+  Searched and found nothing: npm registry search for "multilynq" returned 0
+  results; pypi.org/pypi/multilynq/json returned 404; the GitHub org
+  github.com/multilynq returned 404 and a GitHub repository search for
+  "multilynq" returned 0 repositories. MultiLynq's own site links no SDK, CLI or
+  source repository. Consistent with the delivery model — a hosted venue-
+  connectivity service integrated per client rather than a distributed library —
+  so this is a verified absence and no SDKs pointer is wired into apis.yml.
+registries_checked:
+- registry: npm
+  url: https://registry.npmjs.org/-/v1/search?text=multilynq
+  status: 200
+  results: 0
+- registry: pypi
+  url: https://pypi.org/pypi/multilynq/json
+  status: 404
+  results: 0
+- registry: github
+  url: https://api.github.com/search/repositories?q=multilynq
+  status: 200
+  results: 0
+- registry: github-org
+  url: https://github.com/multilynq
+  status: 404
+  results: 0

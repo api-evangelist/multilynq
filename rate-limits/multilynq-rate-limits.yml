@@ -1,0 +1,21 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.multilynq.com/what-we-do/
+limit_count: 0
+rate_limits: []
+headers: []
+note: >-
+  No published rate limits. MultiLynq documents no API surface at all publicly —
+  no developer portal, reference, specification or error/throttling documentation
+  exists — so there is no stated limit, window, burst, exhaustion status code or
+  response header (X-RateLimit-*, RateLimit-*, Retry-After) to record. The product
+  is a hosted, per-client provisioned connection into a MultiLynq data center;
+  any capacity terms would be set in the client contract rather than published.
+  This is an honest zero, not an unchecked field.
+evidence:
+- url: https://www.multilynq.com/what-we-do/
+  status: 200
+- url: https://www.multilynq.com/docs
+  status: 404
+- url: https://www.multilynq.com/api-docs
+  status: 404

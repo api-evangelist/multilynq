@@ -1,7 +1,21 @@
 aid: multilynq
 name: MultiLynq
-description: 'MultiLynq is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'MultiLynq is a fixed income trading technology company founded in 2018
+  by Patrick Scheideler and Scott Collins and based in Shrewsbury, New Jersey. It sells
+  market integration as a service: a single high-performance API that normalizes the
+  messaging and trading protocols of every major and emerging electronic U.S. fixed
+  income trading venue — including MarketAxess, Tradeweb, Trumid, Bloomberg, ICE Bonds,
+  LTX by Broadridge, Liquidnet, Octaura, TMC Bonds and Bonds.com — into one interface
+  for credit, municipal bond and loan trading. The platform covers pre- and post-trade
+  workflows including price dissemination, market data aggregation, RFQ negotiation,
+  portfolio trading, auction mechanisms, quoting conventions, smart order routing,
+  and post-trade reporting and reconciliation, delivered as a fully hosted solution
+  in which clients establish a single physical connection to a MultiLynq data center
+  while MultiLynq maintains all upstream venue connectivity. The company has raised
+  funding from Citadel Securities and Jane Street. The API is the entire product, but
+  it is sold and onboarded through a sales conversation: MultiLynq publishes no public
+  developer portal, documentation, specification, SDK or pricing.'
+image: https://www.multilynq.com/wp-content/uploads/2025/07/cropped-favicon-192x192.png
 url: https://raw.githubusercontent.com/api-evangelist/multilynq/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,12 +26,85 @@ created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
-apis: []
+- Fixed Income
+- Bond Trading
+- Capital Markets
+- Financial Services
+- Market Data
+- Trading Connectivity
+- FinTech
+- API Integration
+apis:
+- name: MultiLynq Fixed Income Trading API
+  description: 'MultiLynq''s single normalized API for electronic fixed income trading
+    across every major and emerging U.S. venue. It abstracts each venue''s native
+    messaging and trading protocol — RFQ negotiation, portfolio trading, auctions and
+    quoting conventions — behind one interface, and carries pre- and post-trade
+    workflows including price dissemination, market data aggregation, smart order
+    routing, and post-trade reporting and reconciliation. No baseURL is recorded because
+    MultiLynq publishes none: the service is fully hosted and reached over a dedicated
+    physical connection into a MultiLynq data center that is provisioned per client
+    during onboarding, and no public endpoint, specification or documentation exists.'
+  humanURL: https://www.multilynq.com/what-we-do/
+  tags:
+  - Fixed Income
+  - Bond Trading
+  - Trading Connectivity
+  - Market Data
+  properties:
+  - type: Conformance
+    url: conformance/multilynq-conformance.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/multilynq-domain-security.yml
 - type: Website
+  url: https://www.multilynq.com/
+- type: Support
+  url: https://www.multilynq.com/contact/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/multilynq/
+- type: Twitter
+  url: https://x.com/MultiLynq
+- type: SecondaryMarketListing
   url: https://forgeglobal.com/multilynq_stock/
+- type: Plans
+  url: plans/multilynq-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/multilynq-rate-limits.yml
+- type: LLMsTxt
+  url: llms/multilynq-llms.txt
+- type: Packages
+  url: packages/multilynq-packages.yml
+- type: Conformance
+  url: conformance/multilynq-conformance.yml
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 7
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: sales-gate
+  detail: >-
+    MultiLynq's API is its entire product, but the company publishes only a
+    four-page WordPress brochure site whose single call to action is a contact
+    form stating "a member of our team will be in touch shortly" — there is no
+    docs, api or developer subdomain in DNS at all, so the specification exists
+    solely inside a per-client onboarding engagement.
+  evidence:
+  - url: https://www.multilynq.com/contact/
+    status: 200
+  - url: https://www.multilynq.com/what-we-do/
+    status: 200
+  - url: https://www.multilynq.com/openapi.json
+    status: 404
+  - url: https://www.multilynq.com/docs
+    status: 404
+  - url: https://www.multilynq.com/.well-known/agent-card.json
+    status: 404
+  checked: '2026-08-26'
