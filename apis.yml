@@ -15,6 +15,17 @@ description: 'MultiLynq is a fixed income trading technology company founded in 
   funding from Citadel Securities and Jane Street. The API is the entire product, but
   it is sold and onboarded through a sales conversation: MultiLynq publishes no public
   developer portal, documentation, specification, SDK or pricing.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.multilynq.com/wp-content/uploads/2025/07/cropped-favicon-192x192.png
 url: https://raw.githubusercontent.com/api-evangelist/multilynq/refs/heads/main/apis.yml
 x-type: company
