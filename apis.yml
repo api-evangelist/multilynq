@@ -53,7 +53,7 @@ tags:
 - Fixed Income
 - Bond Trading
 - Capital Markets
-- Financial-Services
+- Financial Services
 - Market Data
 - Trading Connectivity
 - Fintech
@@ -68,6 +68,7 @@ tags_raw:
 - Trading Connectivity
 - FinTech
 - API Integration
+- Financial-Services
 apis:
 - name: MultiLynq Fixed Income Trading API
   description: 'MultiLynq''s single normalized API for electronic fixed income trading
